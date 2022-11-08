@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="vatly" placeholder="nhập điểm"><strong> Điểm vật lý </strong><br>
+<input type="number" id="hoahoc" placeholder="nhập điểm"><strong> Điểm hóa học </strong><br>
+<input type="number" id="sinhhoc" placeholder="nhập điểm"><strong> Điểm sinh học </strong><br>
+<button onclick="kiemTra()">Điểm trung bình và tổng</button>
+<p id="tong"></p>
+<p id="dtb"></p>
+</body>
+<script>
+    function kiemTra() {
+        let diemVatLy = document.getElementById("vatly").value;
+        let diemHoaHoc=document.getElementById("hoahoc").value;
+        let diemSinhHoc=document.getElementById("sinhhoc").value;
+        let dtb=(parseInt(diemVatLy) + parseInt(diemHoaHoc) + parseInt(diemSinhHoc)) / 3;
+        document.getElementById("dtb").innerHTML = dtb;
+        let tong =parseInt(diemVatLy) + parseInt(diemHoaHoc) + parseInt(diemSinhHoc);
+        document.getElementById("tong").innerHTML = tong;
+    }
+</script>
+</html>
