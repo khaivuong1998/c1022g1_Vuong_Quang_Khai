@@ -15,12 +15,12 @@
 <script>
     function kiemTra() {
         let diemVatLy = document.getElementById("vatly").value;
-        let diemHoaHoc=document.getElementById("hoahoc").value;
-        let diemSinhHoc=document.getElementById("sinhhoc").value;
-        let dtb=(parseInt(diemVatLy) + parseInt(diemHoaHoc) + parseInt(diemSinhHoc)) / 3;
-        document.getElementById("dtb").innerHTML = dtb;
-        let tong =parseInt(diemVatLy) + parseInt(diemHoaHoc) + parseInt(diemSinhHoc);
+        let diemHoaHoc = document.getElementById("hoahoc").value;
+        let diemSinhHoc = document.getElementById("sinhhoc").value;
+        let tong = parseFloat(diemVatLy) + parseFloat(diemHoaHoc) + parseFloat(diemSinhHoc);
         document.getElementById("tong").innerHTML = tong;
+        let dtb = (parseFloat(diemVatLy) + parseFloat(diemHoaHoc) + parseFloat(diemSinhHoc)) / 3;
+        document.getElementById("dtb").innerHTML = dtb;
     }
 </script>
 </html>

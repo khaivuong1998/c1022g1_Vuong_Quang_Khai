@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi nhiệt độ</h1>
+<input type="number" id="doC"><strong>Độ C</strong>
+<button onclick="kiemTra()">Chuyển</button>
+<p id="nhietDo"></p>
+<input type="number" id="doF"><strong>Độ F</strong>
+</body>
+<script>
+    function kiemTra() {
+        let Celsius = document.getElementById("doC").value;
+        let Fahrenheit= Celsius * 9 / 5 + 32;
+        document.getElementById("doF").value = Fahrenheit;
+    }
+</script>
+</html>

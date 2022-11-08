@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr><h1>Calculator</h1></tr>
+    <tr>
+        <th><input type="text" id="so1" size="9px"></th>
+        <th><input type="text" id="so2" size="9px"></th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="phepcong()"><strong>Addition(+)</strong></button>
+        </th>
+
+        <th>
+            <button type="button" onclick="pheptru()"><strong>Subtracrtion(-)</strong></button>
+        </th>
+
+        <th>
+            <button type="button" onclick="phepnhan()"><strong>Multiplication(*)</strong></button>
+        </th>
+
+        <th>
+            <button type="button" onclick="phepchia()"><strong>Division(/)</strong></button>
+        </th>
+    </tr>
+</table>
+<script>
+    let A;
+    let B;
+
+    function phepcong() {
+        A = document.getElementById("so1").value;
+        B = document.getElementById("so2").value;
+        alert(Number(A) + Number(B));
+    }
+
+    function pheptru() {
+        A = document.getElementById("so1").value;
+        B = document.getElementById("so2").value;
+        alert(Number(A) - Number(B));
+
+    }
+
+    function phepnhan() {
+        A = document.getElementById("so1").value;
+        B = document.getElementById("so2").value;
+        alert(Number(A) * Number(B));
+
+    }
+
+    function phepchia() {
+        A = document.getElementById("so1").value;
+        B = document.getElementById("so2").value;
+        alert(Number(A) / Number(B));
+
+    }
+</script>
+</body>
+</html>
