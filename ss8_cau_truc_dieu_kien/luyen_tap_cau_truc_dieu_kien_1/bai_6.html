@@ -12,18 +12,22 @@
 </body>
 <script>
     function kiemTra() {
-        let sanluong = document.getElementById("so").value;
-        if (sanluong >= 300) {
-            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 20% số doanh thu";
-        } else if (sanluong < 300 && sanluong >= 200) {
-            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 10% số doanh thu";
-        } else if (sanluong < 200 && sanluong > 100) {
-            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 5% số doanh thu";
+        let sanLuong = document.getElementById("so").value;
+        let hoaHong;
+        if (sanLuong >= 300) {
+            hoaHong = sanLuong * 20 / 100;
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 20% số doanh thu: " + hoaHong;
+        } else if (sanLuong < 300 && sanluong >= 200) {
+            hoaHong = sanLuong * 10 / 100;
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 10% số doanh thu: " + hoaHong;
+        } else if (sanLuong < 200 && sanluong > 100) {
+            hoaHong = sanLuong * 5 / 100;
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 5% số doanh thu: " + hoaHong;
         } else {
-            if (sanluong >= 75) {
-                document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Đạt chỉ tiêu";
+            if (sanLuong >= 75) {
+                document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Đạt chỉ tiêu";
             } else {
-                document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Không đạt chỉ tiêu, cần cải thiện";
+                document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Không đạt chỉ tiêu, cần cải thiện";
             }
         }
     }

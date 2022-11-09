@@ -28,9 +28,13 @@
             case 11:
                 document.getElementById("ketQua").innerText = "Tháng " + thang + " có 30 ngày";
                 break;
-                case 2:
-                    document.getElementById("ketQua").innerText = "Tháng 2 có 28 hoặc 29 ngày";
-                        break;
+            case 2:
+                document.getElementById("ketQua").innerText = "Tháng 2 có 28 hoặc 29 ngày";
+                break;
+                default: {
+                    document.getElementById("ketQua").innerText = "Bạn đã nhập sai, vui lòng nhập lại";
+                    break;
+                }
         }
     }
 </script>
