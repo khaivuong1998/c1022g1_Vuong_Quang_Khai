@@ -16,13 +16,13 @@
         let hoaHong;
         if (sanLuong >= 300) {
             hoaHong = sanLuong * 20 / 100;
-            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 20% số doanh thu: " + hoaHong;
-        } else if (sanLuong < 300 && sanluong >= 200) {
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 15% số doanh thu: " + hoaHong + " sản lượng";
+        } else if (sanLuong < 300 && sanLuong >= 200) {
             hoaHong = sanLuong * 10 / 100;
-            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 10% số doanh thu: " + hoaHong;
-        } else if (sanLuong < 200 && sanluong > 100) {
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 10% số doanh thu: " + hoaHong + " sản lượng";
+        } else if (sanLuong < 200 && sanLuong > 100) {
             hoaHong = sanLuong * 5 / 100;
-            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 5% số doanh thu: " + hoaHong;
+            document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Được hưởng 5% số doanh thu: " + hoaHong + " sản lượng";
         } else {
             if (sanLuong >= 75) {
                 document.getElementById("doanhThu").innerHTML = sanLuong + "<br>" + "Đạt chỉ tiêu";

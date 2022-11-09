@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
-    let a = +prompt("Nhập số phút hoạt động");
-    // const phiCoDinh = 25;
+    let a = +prompt("Nhập số phút hoạt động", 0);
+    const phiCoDinh = 25000;
     let phi;
     if (a > 200) {
-        phi = (a - 200) * 200 + 150 * 400 + 50 * 600;
-        document.write("Phí phải trả: " + phi)
-    } else if (a >)
+        phi = (a - 200) * 200 + 150 * 400 + 50 * 600 + +phiCoDinh;
+        document.write("Số tiền phải trả: " + phi + "đ");
+    } else if (a > 50) {
+        phi = (a - 50) * 400 + 50 * 600 + +phiCoDinh;
+        document.write("Số tiền phải trả: " + phi + "đ");
+    } else {
+        phi = a * 600 + +phiCoDinh;
+        document.write("Số tiền phải trả: " + phi + "đ");
+    }
 </script>
 </body>
 </html>
