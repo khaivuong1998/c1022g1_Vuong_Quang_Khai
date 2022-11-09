@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Doanh số bán hàng</h1>
+<input type="number" id="so"> Doanh thu<br>
+<button onclick="kiemTra()"><strong>Check</strong></button>
+<p id="doanhThu"></p>
+</body>
+<script>
+    function kiemTra() {
+        let sanluong = document.getElementById("so").value;
+        if (sanluong >= 300) {
+            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 20% số doanh thu";
+        } else if (sanluong < 300 && sanluong >= 200) {
+            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 10% số doanh thu";
+        } else if (sanluong < 200 && sanluong > 100) {
+            document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Được hưởng 5% số doanh thu";
+        } else {
+            if (sanluong >= 75) {
+                document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Đạt chỉ tiêu";
+            } else {
+                document.getElementById("doanhThu").innerHTML = sanluong + "<br>" + "Không đạt chỉ tiêu, cần cải thiện";
+            }
+        }
+    }
+</script>
+</html>
