@@ -17,22 +17,22 @@
         let a = +document.getElementById("diemKiemTra").value;
         let b = +document.getElementById("diemGiuaKy").value;
         let c = +document.getElementById("diemCuoiKy").value;
-        let dtb = (a + (b * 2) + (c * 3)) / 6;
+        let dTB = (a + (b * 2) + (c * 3)) / 6;
         // document.write(dtb);
-        if (dtb >= 8) {
-            if (dtb >= 9.5) {
-                document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh xuất sắc";
+        if (dTB >= 8) {
+            if (dTB >= 9.5) {
+                document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh xuất sắc";
             } else {
-                document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh giỏi";
+                document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh giỏi";
             }
-        } else if (dtb >= 6.5) {
-            document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh khá";
-        } else if (dtb >= 5) {
-            document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh trung bình";
-        } else if (dtb >= 3.5) {
-            document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh yếu";
+        } else if (dTB >= 6.5) {
+            document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh khá";
+        } else if (dTB >= 5) {
+            document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh trung bình";
+        } else if (dTB >= 3.5) {
+            document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh yếu";
         } else {
-            document.getElementById("xepHang").innerHTML = dtb + "<br>" + "Học sinh kém";
+            document.getElementById("xepHang").innerHTML = dTB + "<br>" + "Học sinh kém";
         }
     }
 </script>
