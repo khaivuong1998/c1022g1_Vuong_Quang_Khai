@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-    let a = prompt("Nhập chiều cao", 0);
-    let b = prompt("Nhập cân nặng", 0);
-    bmi = b / (a * a);
+    let chieuCao = prompt("Nhập chiều cao của bạn", 0);
+    let canNang = prompt("Nhập cân nặng của bạn", 0);
+    bmi = canNang / (chieuCao * chieuCao);
+    document.write(bmi + "<br>");
     if (bmi < 18.5) {
         document.write("Underweight");
     } else if (bmi >= 18.5 && bmi < 25) {

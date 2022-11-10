@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<h4>ax^2 + bx + c = 0</h4>
+a <input type="number" id="soA"><br>
+b <input type="number" id="soB"><br>
+c <input type="number" id="soC"><br>
+<button onclick="kiemTra()">Nghiệm</button>
+<p id="giaTri"></p>
+<p id="ketQua">Hiển thị kết quả</p>
+</body>
+<script>
+    function kiemTra() {
+        let a = parseInt(document.getElementById("soA").value);
+        let b = parseInt(document.getElementById("soB").value);
+        let c = parseInt(document.getElementById("soC").value);
+        let delta = parseFloat(b * b - (4 * a * c));
+        document.getElementById("giaTri").innerHTML = "&#916 = " + delta;
+        if (delta < 0) {
+            document.getElementById("ketQua").innerHTML = "Phương trình vô nghiệm";
+        } else if (delta === 0) {
+            document.getElementById("ketQua").innerHTML = "Phương trình có 1 nghiệm kép: x1 = x2 = " + -b / (2 * a);
+        } else {
+            document.getElementById("ketQua").innerHTML = "Phương trình có 2 nghiệm phân biệt:" + "<br>" + "x1 = " + (-b + Math.sqrt(delta)) / (2 * a) + "<br>" + "x2 = " + (-b - Math.sqrt(delta)) / (2 * a);
+        }
+    }
+</script>
+</html>

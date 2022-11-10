@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thongTin = prompt("Hiện tại bạn đang làm gì?");
+    let thue;
+    if (thongTin === "học sinh" || thongTin === "sinh viên") {
+        alert("Cảm ơn ban, bạn không cần đóng thuế");
+    } else {
+        if (thongTin === "đang đi làm") {
+            let thongTin1 = prompt("Thu nhập 1 năm của bạn là bao nhiêu?");
+            if (thongTin1 > 960) {
+                thue = thongTin1 * 8 / 100;
+                document.write("Thuế 1 năm bạn phải trả là " + thue + " triệu đồng" + "<br>" + "Mời bạn đến ngân hàng để đóng thuế");
+            } else if (thongTin1 > 650) {
+                thue = thongTin1 * 7 / 100;
+                document.write("Thuế 1 năm bạn phải trả là " + thue + " triệu đồng" + "<br>" + "Mời bạn đến ngân hàng để đóng thuế");
+            } else if (thongTin1 > 400) {
+                thue = thongTin1 * 5 / 100;
+                document.write("Thuế 1 năm bạn phải trả là " + thue + " triệu đồng" + "<br>" + "Mời bạn đến ngân hàng để đóng thuế");
+            } else if (thongTin1 > 130) {
+                thue = thongTin1 * 4 / 100;
+                document.write("Thuế 1 năm bạn phải trả là " + thue + " triệu đồng" + "<br>" + "Mời bạn đến ngân hàng để đóng thuế");
+            } else {
+                document.write("Số tiền của bạn chỉ đủ sống, bạn không cần phải đóng thuế")
+            }
+        }
+    }
+</script>
+</body>
+</html>

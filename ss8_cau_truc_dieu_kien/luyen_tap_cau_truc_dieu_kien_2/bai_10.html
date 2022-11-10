@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chương trình tính giá điện</h1>
+<h4>
+    Bậc 1: Từ 0-50kWh: 1.678 đồng/kWh;<br>
+    Bậc 2: Từ 51-100kWh: 1.734 đồng/kWh;<br>
+    Bậc 3: Từ 101-200kWh: 2.014 đồng/kWh;<br>
+    Bậc 4: Từ 201-300kWh: 2.536 đồng/kWh;<br>
+    Bậc 5: Từ 301-400kWh: 2.834 đồng/kWh;<br>
+    Bậc 6: Từ 401kWh trở lên: 2.927 đồng/kWh;<br>
+</h4>
+Số chữ điện <input type="number" id="chuDien">
+<button onclick="giaTien()"><strong>Tổng tiền</strong></button>
+<p id="giaTri">Hiển thị kết quả</p>
+</body>
+<script>
+    function giaTien() {
+        let tien;
+        let chuDien = +document.getElementById("chuDien").value;
+        if (chuDien > 400) {
+            tien = chuDien * 2.927;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        } else if (chuDien > 300) {
+            tien = chuDien * 2.834;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        } else if (chuDien > 200) {
+            tien = chuDien * 2.536;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        } else if (chuDien > 100) {
+            tien = chuDien * 2.014;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        } else if (chuDien > 50) {
+            tien = chuDien * 1.734;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        } else {
+            tien = chuDien * 1.678;
+            document.getElementById("giaTri").innerHTML = "Số tiền bạn phải trả là " + tien + " đồng";
+        }
+    }
+</script>
+</html>

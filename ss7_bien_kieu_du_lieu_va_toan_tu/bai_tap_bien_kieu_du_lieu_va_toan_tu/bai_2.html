@@ -8,14 +8,16 @@
 <h1>Chuyển đổi nhiệt độ</h1>
 <input type="number" id="doC"><strong>Độ C</strong>
 <button onclick="kiemTra()">Chuyển</button>
-<p id="nhietDo"></p>
 <input type="number" id="doF"><strong>Độ F</strong>
+<p id="nhietDo"></p>
 </body>
 <script>
+    let fahrenheit;
+
     function kiemTra() {
-        let Celsius = document.getElementById("doC").value;
-        let Fahrenheit= Celsius * 9 / 5 + 32;
-        document.getElementById("doF").value = Fahrenheit;
+        let celsius = document.getElementById("doC").value;
+        fahrenheit = celsius * 9 / 5 + 32;
+        document.getElementById("doF").value = fahrenheit;
     }
 </script>
 </html>
