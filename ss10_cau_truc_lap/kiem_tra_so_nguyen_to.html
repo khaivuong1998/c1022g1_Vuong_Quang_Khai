@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = 0;
+    let count = 0;
+    let i = 2;
+    while (i >= 2 && check < 20  ) {
+        for (let j = 1; j <= i; j++) {
+            if (i % j === 0) {
+                count++;
+            }
+        } if (count === 2) {
+            document.write(i + "<br>");
+            check++;
+        }
+        count = 0;
+        i++;
+    }
+    // for (let i = 0; i <= 1000; i++) {
+    //     if (i >= 2) {
+    //         for (let j = 1; j <= i; j++) {
+    //             if (i % j === 0) {
+    //                 count++;
+    //             }
+    //         }
+    //     } if (count === 2) {
+    //         document.write(i + "<br>");
+    //     }
+    //     count = 0;
+    // }
+</script>
+</body>
+</html>

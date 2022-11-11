@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+</body>
+<script>
+    let timeTable = "<table border='3' cellspacing='0' cellpadding='2' style='background-color: white'>"
+    for (let i = 1; i <= 10; i++) {
+        timeTable += "<tr>";
+        for (let j = 1; j <= 10; j++) {
+            timeTable += "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        }
+        timeTable += "<tr>";
+    }
+    timeTable += "</table>";
+    document.write(timeTable);
+</script>
+</html>
