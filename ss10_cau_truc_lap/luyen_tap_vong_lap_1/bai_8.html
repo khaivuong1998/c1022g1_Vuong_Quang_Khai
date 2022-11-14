@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<button onclick="batDau()">Bắt đầu</button>
+<p id="ketQua">Hiển thị kết quả</p>
 </body>
+<script>
+    function batDau() {
+        let number = parseInt(prompt("Nhập vào giới hạn số bạn muốn đoán"));
+        let randomNumber = parseInt((Math.random() * number));
+        let number1 = parseInt(prompt("Nhập số bạn đoán"));
+        let count = 0;
+        while (number1 !== randomNumber) {
+            count++;
+            if (count > 2) {
+                document.getElementById("ketQua").innerHTML = "Bạn đã đoán sai 3 lần, bạn đã hết lượt đoán xin chia buồn";
+                break;
+            } else if (number1 < randomNumber) {
+                alert("Bạn cần tăng giá trị");
+            } else {
+                alert("Bạn cần giảm giá trị");
+            }
+            number1 = parseInt(prompt("Mời bạn đoán lại"));
+        }
+        while (number1 === randomNumber) {
+            document.getElementById("ketQua").innerHTML = "Chúc mừng bạn đã đoán đúng";
+            break;
+        }
+    }
+</script>
 </html>
