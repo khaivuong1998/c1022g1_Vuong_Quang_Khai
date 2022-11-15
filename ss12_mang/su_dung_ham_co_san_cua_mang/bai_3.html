@@ -6,12 +6,15 @@
 </head>
 <body>
 <script>
-    let n = +prompt("Nhập độ dài mảng");
-    let arr1 = [];
-    for (let i = 0; i < n; i++) {
-        arr1[i] = prompt("Nhập kí tụ thứ " + i);
-    } document.write(arr1.join(' ') + "<br>");
-    document.write()
+    let string = prompt("Nhập chuỗi ký tự");
+    let arr1 = string.split(" ");
+    document.write(arr1 + "<br>");
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== "") {
+            arr1[i] = arr1[i].toLocaleUpperCase();
+        }
+    }
+    document.write(arr1.join(" "));
 </script>
 </body>
 </html>

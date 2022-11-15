@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<label for="keyWord">Nhập từ tiếng Anh 1 loại trái cây</label><br>
+<input type="text" id="keyWord">
+<button onclick="tuDien()">Dịch</button>
+<p id="key">Hiển thị kết quả</p>
+<script>
+    let arr = ['orange', 'guava', 'mango', 'lemon', 'water melon', 'mangosteen', 'apple'];
+    let arr1 = ['cam', 'ổi', 'xoài', 'chanh', 'dưa hấu', 'măng cụt', 'táo'];
 
+    function tuDien() {
+        let kiemTra = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === document.getElementById("keyWord").value) {
+                kiemTra = true;
+                document.getElementById("key").innerText = arr1[i];
+                break;
+            }
+        }
+        if (kiemTra === false) {
+            alert("Không tìm thấy");
+        }
+    }
+</script>
 </body>
 </html>
