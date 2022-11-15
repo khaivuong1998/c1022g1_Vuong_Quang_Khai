@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập độ dài mảng");
+    let array = [];
+    let max = 0;
+    let tong = 0;
+    let trungBinh = 0;
+    for (let i = 0; i < a; i++) {
+        array[i] = +prompt("Nhập phần tử thứ " + i);
+    }
+    document.write(array + "<br>");
+    for (let i = 0; i < array.length; i++) {
+        tong += array[i];
+        if (max < array[i]) {
+            max = array[i];
+        }
+    }
+    trungBinh = tong / a;
+    document.write("Số lớn nhất: " + max + "<br>" + " Giá trị trung bình: " + trungBinh);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập giới hạn số bạn muốn tính (1 đến ...)");
+    let sumOfSquares = 0;
+    for (let i = 1; i <= number; i++) {
+        if (i % 2 !== 0) {
+            sumOfSquares = sumOfSquares + i * i;
+        }
+    } document.write(sumOfSquares);
+</script>
+</body>
+</html>

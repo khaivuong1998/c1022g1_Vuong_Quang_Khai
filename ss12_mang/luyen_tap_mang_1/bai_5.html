@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài mảng");
+    let arr = [];
+    let count = 0;
+    let arr1 = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập số thứ " + i);
+    }
+    document.write(arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            arr1.push(arr[i]);
+            count++;
+        }
+    } document.write("Có " + count + " số nguyên âm trong mảng: " + arr1);
+</script>
+</body>
+</html>

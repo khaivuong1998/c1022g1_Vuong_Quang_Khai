@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let count = 0;
+    let arr1 = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt("Nhập số thứ " + i);
+    }
+    document.write(arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 10) {
+            arr1.push(arr[i]);
+            count++;
+        }
+    }
+    document.write(count + ': ' + arr1);
+</script>
+</body>
+</html>
