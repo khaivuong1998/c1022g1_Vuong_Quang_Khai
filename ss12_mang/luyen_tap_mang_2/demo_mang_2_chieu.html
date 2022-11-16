@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c</title>
+</head>
+<body>
+<script>
+    let arr2Chieu = [];
+    let n = +prompt("Nhập đọ dài mảng 2 chiều");
+
+    for (let i = 0; i < n; i++) {
+        let arr = [];
+        let m = +prompt("Nhập độ dai của mảng 1 chiều thứ " + i);
+        for (let j = 0; j < m; j++) {
+            let e = prompt("Nhập phần tử thứ " + j + " của mảng " + i);
+            arr.push(e);
+        }
+        arr2Chieu.push(arr);
+    }
+    for (let i = 0; i < arr2Chieu.length; i++) {
+        document.write(arr2Chieu[i] + "<br>");
+    }
+</script>
+</body>
+</html>

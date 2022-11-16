@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = +prompt("Nhập số thứ " + i + " của mảng 1");
+    }
+    document.write("Mảng 1: " + a + "<br>");
+    for (let i = 0; i < 10; i++) {
+        b[i] = +prompt("Nhập số thứ " + i + " của mảng 2");
+    }
+    document.write("Mảng 2: " + b + "<br>");
+    c.push(a,b);
+    document.write("Mảng 3: " + c);
+</script>
+</body>
+</html>

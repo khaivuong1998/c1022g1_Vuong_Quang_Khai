@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let string = prompt("Nhập chuỗi bất kỳ");
+    let arr = string.split("");
+    document.write(arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] / arr[i] !== 1) {
+            count++;
+        }
+    }
+    document.write("Số từ có trong mảng: " + count);
+</script>
+</body>
+</html>
