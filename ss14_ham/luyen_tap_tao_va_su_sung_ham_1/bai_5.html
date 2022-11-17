@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let inputStar = prompt("Nhập ngôi sao bạn muốn tìm");
+    function constellation(inputStar) {
+        let check = true;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === inputStar) {
+                document.write(arr2[i]);
+                check = true;
+                break;
+            }
+            else {
+                check = false;
+            }
+        }
+        if (check === false) {
+            alert("Không tìm thấy ngôi sao của bạn");
+        }
+    }
+    constellation(inputStar);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let banKinh = +prompt("Nhập vào bán kính hình tròn");
+    const soPi = 3.14;
+    function dienTich() {
+        let S = banKinh * banKinh * soPi;
+        return S;
+    }
+    function chuVi() {
+        let C = 2 * banKinh * soPi;
+        return C;
+    }
+    document.write("Diện tích hình tròn có bán kính " + banKinh + ": " + dienTich() +"<br>")
+    document.write("Chu vi hình tròn có bán kính " + banKinh + ": " + chuVi());
+</script>
+</body>
+</html>
