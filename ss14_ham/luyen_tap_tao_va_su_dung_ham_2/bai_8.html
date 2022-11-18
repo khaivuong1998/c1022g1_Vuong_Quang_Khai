@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập số thứ " + i);
+    }
+    document.write("Mảng ban đầu: " + arr + "<br>");
+
+    function daoNguoc(arr) {
+        let cont = arr.length - 1;
+        for (let i = 0; i < cont; i++) {
+            let b = arr[i];
+            arr[i] = arr[cont];
+            arr[cont] = b;
+            cont--;
+        }
+        return arr;
+    }
+
+    document.write("Mảng đảo ngược: " + daoNguoc(arr));
+</script>
+</body>
+</html>

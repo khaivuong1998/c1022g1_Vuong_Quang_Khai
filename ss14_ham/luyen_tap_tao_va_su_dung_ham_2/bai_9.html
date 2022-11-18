@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Nhập ký tự thứ " + i);
+    }
+    document.write(arr + "<br>");
+    let a = prompt("Nhập ký tự bất kỳ");
+    function kiemTra(a) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (a === arr[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return "Số lần xuất hiện của " + a + " trong mảng: " + count + " lần";
+        }
+        return -1;
+    }
+    document.write(kiemTra(a));
+</script>
+</body>
+</html>

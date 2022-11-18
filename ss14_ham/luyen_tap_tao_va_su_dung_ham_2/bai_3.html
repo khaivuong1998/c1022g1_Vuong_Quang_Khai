@@ -7,14 +7,12 @@
 <body>
 <script>
     let a = +prompt("Nhập số nguyên bất kỳ");
-    function giaiThua(a) {
-        let b;
-        for (let i = 1; i < a; i++) {
-            b = a * i;
-        }
-        document.write(b);
+    function giaiThua(i) {
+        if (i == 1)
+            return 1;
+        return i * giaiThua(i - 1);
     }
-    giaiThua(a);
+    document.write("Giai thừa của " + a + " là " + giaiThua(a));
 </script>
 </body>
 </html>

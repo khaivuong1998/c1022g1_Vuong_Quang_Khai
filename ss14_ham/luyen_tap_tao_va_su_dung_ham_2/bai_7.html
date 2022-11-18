@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doiCho(a, b) {
+        let arr = [];
+        let c = a
+        a = b;
+        b = c;
+        arr.push(a, b);
+        return arr;
+    }
+
+    let a = +prompt("Nhập số thứ 1");
+    let b = +prompt("Nhập số thứ 2");
+    document.write(doiCho(a, b));
+</script>
+</body>
+</html>

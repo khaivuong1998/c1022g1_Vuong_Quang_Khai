@@ -10,15 +10,15 @@
     let n = +prompt("Nhập độ dài mảng 2 chiều");
     for (let i = 0; i < n; i++) {
         let arr = [];
-        let m = +prompt("Nhập độ dài của mảng 1 chiều thứ " + i);
+        let m = +prompt("Nhập độ dài của mảng 1 chiều thứ " + (i + 1));
         for (let j = 0; j < m; j++) {
-            let e = prompt("Nhập phần tử thứ " + j + " của mảng " + i);
+            let e = prompt("Nhập phần tử thứ " + (j + 1) + " của mảng " + (i + 1));
             arr.push(e);
         }
         arr2Chieu.push(arr);
     }
     for (let i = 0; i < arr2Chieu.length; i++) {
-        document.write("row" + i + "<br>");
+        document.write("row" + (i + 1) + "<br>");
         for (let j = 0; j < arr2Chieu[i].length; j++) {
             document.write(arr2Chieu[i][j] + "<br>");
         }
