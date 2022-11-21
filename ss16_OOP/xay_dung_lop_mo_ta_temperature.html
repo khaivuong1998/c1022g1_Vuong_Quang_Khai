@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        celsiusToFahrenheit() {
+            let doF = (this.doC * 1.8) + 32;
+            return doF;
+        }
+
+        celsiusToKenvin() {
+            let doKenvin = this.doC + 273.15;
+            return doKenvin;
+        }
+    }
+
+    let nhietDo = +prompt("Nhập nhiệt độ bạn muốn đổi (độ C)");
+    do {
+        if (nhietDo < -273) {
+            nhietDo = +prompt("Bạn đã nhập sai, mời bạn nhập lại");
+        }
+    } while (nhietDo < -273)
+    let temperature = new Temperature(nhietDo);
+    document.write(nhietDo + " độC = " + temperature.celsiusToFahrenheit() + " độF" + "<br>");
+    document.write(nhietDo + " độC = " + temperature.celsiusToKenvin() + " độ kenvin");
+</script>
+</body>
+</html>

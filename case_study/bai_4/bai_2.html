@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập chuỗi ký tự bất kỳ");
+    let arr = string.split("");
+    let arr1 = [];
+    document.write(arr + "<br>");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr1.indexOf(arr[i]) === -1) {
+            arr1.push(arr[i]);
+        }
+    }
+    document.write(arr1);
+</script>
+</body>
+</html>

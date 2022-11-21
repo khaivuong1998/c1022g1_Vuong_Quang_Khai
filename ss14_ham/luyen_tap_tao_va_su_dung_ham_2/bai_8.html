@@ -14,12 +14,12 @@
     document.write("Mảng ban đầu: " + arr + "<br>");
 
     function daoNguoc(arr) {
-        let cont = arr.length - 1;
-        for (let i = 0; i < cont; i++) {
+        let count = arr.length - 1;
+        for (let i = 0; i < count; i++) {
             let b = arr[i];
-            arr[i] = arr[cont];
-            arr[cont] = b;
-            cont--;
+            arr[i] = arr[count];
+            arr[count] = b;
+            count--;
         }
         return arr;
     }
