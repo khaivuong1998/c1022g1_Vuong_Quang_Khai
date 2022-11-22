@@ -9,13 +9,15 @@
     let string = prompt("Nhập chuỗi ký tự bất kỳ");
     let arr = string.split("");
     let arr1 = [];
-    document.write(arr + "<br>");
+    let count = 0;
+    document.write(string + "<br>");
     for (let i = 0; i < arr.length; i++) {
         if (arr1.indexOf(arr[i]) === -1) {
             arr1.push(arr[i]);
+            count++;
         }
     }
-    document.write(arr1);
+    document.write("Chuỗi ban đầu có " + count + " ký tự khác nhau: " + arr1);
 </script>
 </body>
 </html>

@@ -5,13 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas" width="500" height="300" style="border: 2px solid black"></canvas><br>
+<canvas id="myCanvas" width="500" height="300" style="border: 2px solid black "></canvas>
+<br>
 <script>
     class Rectangle {
         constructor(chieuDai, chieuRong) {
             this.chieuDai = chieuDai;
             this.chieuRong = chieuRong;
         }
+
 
         area() {
             let S = this.chieuDai * this.chieuRong;
@@ -25,9 +27,10 @@
 
         drawRectangle() {
             let ctx = document.getElementById("myCanvas").getContext("2d");
-            ctx.beginPath();
             ctx.rect(30, 30, this.chieuDai, this.chieuRong);
-            ctx.fillStyle = 'darkred';
+            ctx.strokeStyle = '#fc0d0d';
+            ctx.stroke();
+            ctx.fillStyle = 'rgba(0,100,53,0.76)';
             ctx.fill();
         }
     }
