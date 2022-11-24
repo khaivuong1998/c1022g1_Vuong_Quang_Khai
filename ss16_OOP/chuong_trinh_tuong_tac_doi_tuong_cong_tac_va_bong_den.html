@@ -7,23 +7,23 @@
 <body>
 <script>
     class SwitchButton {
-        constructor(status, electricLamp) {
+        constructor(status, lamp) {
             this.status = status;
-            this.electricLamp = electricLamp;
+            this.lamp = lamp;
         }
 
-        connectToLamp(electricLamp2) {
-            this.electricLamp = electricLamp2;
+        connectToLamp(lamp2) {
+            this.lamp = lamp2;
         }
 
         switchOff() {
             this.status = false;
-            return this.electricLamp.turnOff();
+            return this.lamp.turnOff();
         }
 
         switchOn() {
             this.status = true;
-            return this.electricLamp.turnOn();
+            return this.lamp.turnOn();
         }
     }
 

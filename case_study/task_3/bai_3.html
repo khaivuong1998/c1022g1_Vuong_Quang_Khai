@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài 2 mảng");
+    let numerators = [];
+    let denominators = [];
+    for (let i = 0; i < n; i++) {
+        numerators[i] = +prompt("Nhập số thứ " + (i + 1) + " của mảng tử");
+    }
+    for (let i = 0; i < n; i++) {
+        denominators[i] = +prompt("Nhập số thứ " + (i + 1) + " của mảng mẫu");
+    }
+    document.write(numerators + "<br>" + denominators + "<br>");
+    let max = (numerators[0] / denominators[0]);
+    let index;
+    let ketQua;
+    for (let i = 0; i < numerators.length; i++) {
+        if (max < (numerators[i] / denominators[i])) {
+            max = (numerators[i] / denominators[i]);
+            ketQua = numerators[i] + "/" + denominators[i];
+            index = i;
+        }
+    }
+    document.write("Phân số lớn nhất: " + ketQua + ", có chỉ số: " + index);
+</script>
+</body>
+</html>

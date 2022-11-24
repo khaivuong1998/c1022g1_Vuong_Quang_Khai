@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Tính lương nhân viên</h4>
+<input type="number" id="wage" placeholder="nhập lương">
+<button onclick="tinhLuong()">Tính</button>
+<p id="luongRong">Hiển thị kết quả</p>
+</body>
+<script>
+    function tinhLuong() {
+        let luong = document.getElementById("wage").value;
+        let luongThucNhan;
+        if (luong >= 15000000) {
+            luongThucNhan = luong * 80 / 100;
+            document.getElementById("luongRong").innerHTML = "Lương thực nhận: " + luongThucNhan + "VND";
+        } else if (luong < 15000000 && luong >= 7000000) {
+            luongThucNhan = luong * 90 / 100;
+            document.getElementById("luongRong").innerHTML = "Lương thực nhận: " + luongThucNhan + "VND";
+        } else {
+            luongThucNhan = luong * 95 / 100;
+            document.getElementById("luongRong").innerHTML = "Lương thực nhận: " + luongThucNhan + "VND";
+        }
+    }
+</script>
+</html>

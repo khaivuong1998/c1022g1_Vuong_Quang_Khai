@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài mảng 1");
+    let arr = [];
+    let arr1 = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("Nhập số nguyên thứ " + (i + 1));
+    }
+    document.write(arr + "<br>");
+    arr1[0] = arr[0];
+    for (let i = 0; i < arr.length - 1; i++) {
+        arr1[i + 1] = arr1[i] + arr[i + 1];
+    }
+    document.write(arr1);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Nhập chuỗi ký tự 1");
+    let arr1 = str1.split("");
+    let str2 = prompt("Nhập chuỗi ký tự 2");
+    let arr2 = str2.split("");
+    document.write(str1 + "<br>" + str2 + "<br>");
+    let arrNew = [];
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.indexOf(arr1[i]) !== -1) {
+            count++;
+            arrNew.push(arr1[i]);
+            arr2.splice(arr2.indexOf(arr1[i]), 1);
+        }
+    }
+    document.write("Hai chuỗi 1 và 2 có: " + count + " ký tự chung: " + arrNew);
+</script>
+</body>
+</html>

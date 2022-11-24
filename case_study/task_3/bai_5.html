@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Menu</h1>
+<p>
+    1. Cafe:15k <input type="number" id="caFe"><br>
+    2. Nước cam:20k <input type="number" id="nuocCam"><br>
+    3. Nước ép cà rốt:25k <input type="number" id="caRot"><br>
+    4. Nước ép cà chua:20k <input type="number" id="caChua"><br>
+    5. Nước suối:5k <input type="number" id="suoi"><br>
+    6. Nước dừa :25k <input type="number" id="dua"><br>
+<!--    7. Thoát menu: <input id="thoat"><br>-->
+    <button onclick="">Thoát gọi món</button>
+</p>
+<button onclick="tinhTien()">Tính tiền</button>
+<p id="tinh">Hiển thị tổng tiền</p>
+</body>
+<script>
+    let sum;
+
+    function tinhTien() {
+        let mon1 = document.getElementById("caFe").value;
+        let mon2 = document.getElementById("nuocCam").value;
+        let mon3 = document.getElementById("caRot").value;
+        let mon4 = document.getElementById("caChua").value;
+        let mon5 = document.getElementById("suoi").value;
+        let mon6 = document.getElementById("dua").value;
+        sum = (mon1 * 15) + (mon2 * 20) + (mon3 * 25) + (mon4 * 20) + (mon5 * 5) + (mon6 * 25);
+        document.getElementById("tinh").innerText = sum + " nghìn đồng";
+    }
+</script>
+</html>

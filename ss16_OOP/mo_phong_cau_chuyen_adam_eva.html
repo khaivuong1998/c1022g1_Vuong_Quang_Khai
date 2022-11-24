@@ -55,14 +55,6 @@
             }
         }
 
-        getName() {
-            return this.name;
-        }
-
-        getGender() {
-            return this.gender;
-        }
-
         getWeight() {
             return this.weight += 1;
         }
@@ -75,7 +67,7 @@
     document.write("Chào " + human1.name + ", mình là " + human2.name + ", giới tính " + human2.gender + ", nặng: " + human2.weight + "kg" + "<br>");
     document.write(human1.name + ": Bạn có muốn ăn táo không?" + "<br>");
     document.write(human2.name + ": Có" + "<br>");
-    document.write(human1.name + ": Mình mới hái được quá to nặng " + apple.weight + "kg" + ", mời " + human2.name + " ăn trước" + "<br>");
+    document.write(human1.name + ": Mình mới hái được quả to nặng " + apple.weight + "kg" + ", mời " + human2.name + " ăn trước" + "<br>");
     while (apple.weight > 0) {
         document.write(human2.name + " " + human2.eat(apple) + "<br>");
         document.write("Quả táo còn " + " " + apple.decrease() + "kg" + "<br>");
