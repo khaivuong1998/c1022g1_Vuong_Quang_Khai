@@ -17,13 +17,16 @@
         arr2[i] = prompt("Nhập phần tử thứ " + (i + 1));
     }
     document.write(arr1 + "<br>" + arr2 + "<br>");
-    let arrNew = [];
-    for (let i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) === -1) {
-            arrNew.push(arr2[i]);
+    function missingValue(arr1, arr2) {
+        let arrNew = [];
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) === -1) {
+                arrNew.push(arr2[i]);
+            }
         }
+        document.write("Các phần tử có trong mảng 2 mà không có trong mảng 1: " + arrNew);
     }
-    document.write("Các phần tử có trong mảng 2 mà không có trong mảng 1: " + arrNew);
+    missingValue(arr1, arr2);
 </script>
 </body>
 </html>

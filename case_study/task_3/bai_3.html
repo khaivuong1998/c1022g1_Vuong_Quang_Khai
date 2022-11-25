@@ -16,17 +16,22 @@
         denominators[i] = +prompt("Nhập số thứ " + (i + 1) + " của mảng mẫu");
     }
     document.write(numerators + "<br>" + denominators + "<br>");
-    let max = (numerators[0] / denominators[0]);
-    let index;
-    let ketQua;
-    for (let i = 0; i < numerators.length; i++) {
-        if (max < (numerators[i] / denominators[i])) {
-            max = (numerators[i] / denominators[i]);
-            ketQua = numerators[i] + "/" + denominators[i];
-            index = i;
+
+    function maxFraction(numerators, denominators) {
+        let max = (numerators[0] / denominators[0]);
+        let index;
+        let ketQua;
+        for (let i = 0; i < numerators.length; i++) {
+            if (max < (numerators[i] / denominators[i])) {
+                max = (numerators[i] / denominators[i]);
+                ketQua = numerators[i] + "/" + denominators[i];
+                index = i;
+            }
         }
+        document.write("Phân số lớn nhất: " + ketQua + ", có chỉ số: " + index);
     }
-    document.write("Phân số lớn nhất: " + ketQua + ", có chỉ số: " + index);
+
+    maxFraction(numerators, denominators);
 </script>
 </body>
 </html>

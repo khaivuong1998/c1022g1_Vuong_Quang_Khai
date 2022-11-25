@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr2Chieu = [];
+    let a = +prompt("Nhập độ dài mảng 2 chiều");
+    for (let i = 0; i < a; i++) {
+        let arr = [];
+        let b = +prompt("Nhập độ dài mảng 1 chiều thứ " + (i + 1));
+        for (let j = 0; j < b; j++) {
+            let c = +prompt("Nhập phần tử thứ " + (j + 1) + " của mảng " + (j + 1));
+            arr.push(c);
+        }
+        arr2Chieu.push(arr);
+    }
+    document.write(arr2Chieu + "<br>");
+    tinhTongChan(arr2Chieu);
+
+    function tinhTongChan(arr2Chieu) {
+        let tongChan = 0;
+        for (let i = 0; i < arr2Chieu.length; i++) {
+            for (let j = 0; j < arr2Chieu[i].length; j++) {
+                if (arr2Chieu[i][j] % 2 === 0) {
+                    tongChan += arr2Chieu[i][j];
+                    document.write(arr2Chieu[i][j] + ", ");
+                }
+            }
+        }
+        document.write("<br>" + "Tổng các số chẵn có trong ma trận: " + tongChan);
+    }
+</script>
+</body>
+</html>
