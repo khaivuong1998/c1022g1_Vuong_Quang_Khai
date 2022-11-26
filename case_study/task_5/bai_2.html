@@ -18,30 +18,57 @@
         arr2Chieu.push(arr);
     }
     document.write(arr2Chieu + "<br>");
-    document.write(isPrime(arr2Chieu));
-
-    function isPrime(arr2Chieu) {
-        let count = 0;
-        let countSNT = 0;
-        let arrNew = [];
-        for (let i = 0; i < arr2Chieu.length; i++) {
-            for (let j = 0; j < arr2Chieu[i].length; j++) {
-                if (arr2Chieu[i][j] > 2) {
-                    for (let k = 1; k <= arr2Chieu[i][j]; k++) {
-                        if (arr2Chieu[i][j] % k === 0) {
-                            count++;
-                        }
-                    }
-                    if (count === 2) {
-                        arrNew.push(arr2Chieu[i][j]);
-                        countSNT++;
-                    }
-                    count = 0;
-                }
+    let arrNew = [];
+    for (let i = 0; i < arr2Chieu.length; i++) {
+        for (let j = 0; j < arr2Chieu[i].length; j++) {
+            if (isPrime(arr2Chieu[i][j])) {
+                arrNew.push(arr2Chieu[i][j]);
             }
         }
-        return "<br>" + "Có " + countSNT + " số nguyên tố trong mảng 2 chiều: " + arrNew;
     }
+    document.write("Các số nguyên tố có trong mảng 2 chiều: " + arrNew);
+
+    function isPrime(number) {
+        let count = 0;
+        let countSNT = 0;
+        if (number >= 2) {
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                countSNT++;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // document.write(isPrime(arr2Chieu));
+    //
+    // function isPrime(arr2Chieu) {
+    //     let count = 0;
+    //     let countSNT = 0;
+    //     let arrNew = [];
+    //     for (let i = 0; i < arr2Chieu.length; i++) {
+    //         for (let j = 0; j < arr2Chieu[i].length; j++) {
+    //             if (arr2Chieu[i][j] >= 2) {
+    //                 for (let k = 1; k <= arr2Chieu[i][j]; k++) {
+    //                     if (arr2Chieu[i][j] % k === 0) {
+    //                         count++;
+    //                     }
+    //                 }
+    //                 if (count === 2) {
+    //                     arrNew.push(arr2Chieu[i][j]);
+    //                     countSNT++;
+    //                 }
+    //                 count = 0;
+    //             }
+    //         }
+    //     }
+    //     return "<br>" + "Có " + countSNT + " số nguyên tố trong mảng 2 chiều: " + arrNew;
+    // }
 </script>
 </body>
 </html>
